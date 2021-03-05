@@ -56,13 +56,13 @@ namespace WindowsFormsApplication3
                     bw.BaseStream.Position = 0xFD3;
                     bw.Write(0x06000000 + UserResult);
                     bw.Close();
-                    MessageBox.Show("The Green Star Count Of Level 1 (EnterCatMarioStage) Has Been Changed to " + UserResult + "!", "Done!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("The Green Star count of Level 1 (EnterCatMarioStage) has been changed to " + UserResult + "!", "Done.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     UserResult = 0;
                 }
             }
             else if (FileOpened == false)
             {
-                MessageBox.Show("First Open A File", "No File Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You have to open a File first.", "No file selected.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -235,7 +235,7 @@ namespace WindowsFormsApplication3
 
         private void httpsdiscordggKVhjRzBToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://discord.gg/KVhjRzB");
+            MessageBox.Show("Discord invite is invalid/unavailable.", "I wonder what happened to it?");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -252,7 +252,7 @@ namespace WindowsFormsApplication3
                     bw.Write(0x06000000 + UserResult);
                     bw.Close();
 
-                    MessageBox.Show("The Green Star Count Of Level 2 (NokonokoCaveStage) Has Been Changed to " + UserResult + "!", "Done!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("The Green Star Count Of Level 2 (NokonokoCaveStage) Has Been Changed to " + UserResult + "!", "Done.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     UserResult = 0;
                 }
             }
@@ -561,7 +561,7 @@ namespace WindowsFormsApplication3
                     {
                         File.Delete(SZSSave.FileName);
                         File.Copy("Files/!out", SZSSave.FileName);
-                        MessageBox.Show("Successfully saved the szs file!", "Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Successfully saved the szs file!", "Done.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     if (Res == DialogResult.Cancel)
                     {
@@ -571,7 +571,7 @@ namespace WindowsFormsApplication3
             }
             else
             {
-                MessageBox.Show("save canceled", "didn't save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Save canceled", "Didn't save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 File.Delete("Files/!out");
             }
        }
